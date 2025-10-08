@@ -1,0 +1,106 @@
+:root  {
+    --primary: #c09578;
+    --primary_hover: #AE876D;
+    --text: #626262;
+    --accent: #ffffff;
+    --light: #888888;
+    --border: #3b3b3b;
+    --background: #252525;
+    --color-9e72934: #FFF;
+}
+.con {
+    background-color: var(--background);
+    padding-bottom: 5rem;
+}
+.minibanner-box {
+    margin-top: -3rem;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+   }
+.minibanner-box .minibanner-content{
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    left: 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+     }
+.minibanner-content h5 {
+    font-size: 2.5rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--accent);
+    font-weight: 400;
+}
+.spacer-inner {
+    /* height: 8.75rem; */
+}
+.minibanner-content a {
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: var(--accent);
+     }
+.minibanner-box:nth-child(3) .minibanner-content h5,
+.minibanner-box:nth-child(3) .minibanner-content a {
+  color: #7B746E;
+}
+.minibanner-box .minibanner-content a:hover {
+   color: #000;
+     }
+.minibanner-box:nth-child(1) .minibanner-content a:hover {
+   color: var(--primary_hover);
+}
+.minibanner-box::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.minibanner-box:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+.minibanner-box img {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.minibanner-box:hover > img {
+  transform: scale(1.1);  
+  opacity: 0.9;          
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) { 
+.minibanner-content h5 {
+    font-size: 1.5rem;
+   }
+   .minibanner-content a {
+    font-size: 0.5rem;
+        }
+  }
+   /* mobile */
+@media (max-width: 575.98px) { 
+.minibanner-box {
+    margin-top: 1rem;
+}
+.minibanner-content h5 {
+    font-size: 2rem;
+   }
+ }

@@ -1,0 +1,105 @@
+:root  {
+    --primary: #c09578;
+    --primary_hover: #AE876D;
+    --text: #626262;
+    --accent: #ffffff;
+    --light: #888888;
+    --border: #3b3b3b;
+    --background: #252525;
+    --color-9e72934: #FFF;
+}
+header {
+    background-color: var(--background);
+}
+header .hea-wel  {
+    color: var(--text);
+    font-size: 0.875rem;
+    margin-left: 1rem;
+}
+.custom-hr {
+    color: var(--light);
+}
+.search-box {
+       border: 2px solid var(--border);
+       padding: 0.4rem 0.5rem;
+       border-radius: 3px;
+}
+.search-box .search-icon {
+    color: var(--primary);
+    margin-left: 1rem;
+    font-size: 1.3rem;
+}
+.search-box input {
+    border: none;
+    outline: none;  
+    padding-left: 0.3em;
+    padding-right: 20em;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    background-color: transparent;
+    caret-color: var(--light);
+}
+.search-box input::placeholder {
+    color: var(--text);
+    transition: color 0.5s ease-in-out;
+}
+input:focus::placeholder {
+  color: transparent; 
+}
+.search-box .sea-btn {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 3px;
+    color: var(--color-9e72934);
+    font-weight: 700;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9rem;
+}
+.search-box .sea-btn:hover {
+    background-color: var(--primary_hover);
+    border-color: var(--primary_hover);
+}
+.social-icons .icon  {
+  color: var(--accent);
+  font-size: 1.7rem;
+}
+.social-icons .icon:hover  {
+  color: var(--primary_hover);
+}
+.icon .my-badge {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-size: 0.670rem;
+  height: 2em;
+  width: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    header {
+        padding-bottom: 1rem;
+    }
+     .search-box input {
+    padding-right: 10em;
+}
+}  
+/* mobile */
+@media (max-width: 575.98px) { 
+    .healog-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    .hea-logo {
+        width: 30%;
+    }
+     header {
+        padding-bottom: 1rem;
+    }
+    .search-box input {
+    padding-right: 0;
+}
+ }

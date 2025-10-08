@@ -1,0 +1,90 @@
+:root  {
+    --primary: #c09578;
+    --primary_hover: #AE876D;
+    --text: #626262;
+    --accent: #ffffff;
+    --light: #888888;
+    --border: #3b3b3b;
+    --background: #252525;
+    --color-9e72934: #FFF;
+}
+.img-hover-wrap {
+  position: relative;
+  overflow: hidden;
+  }
+   .ratio img {
+  width: 100%;
+  height: 100%; 
+ object-fit: cover;
+}
+/* .img-hover-wrap img {
+  transition: transform 0.3s ease;
+}
+
+.img-hover-wrap:hover img {
+  transform: scale(1.05); 
+} */
+
+/* Overlay */
+.hover-overlay {
+  position: absolute;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.img-hover-wrap:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Plus Icon */
+.plus-icon {
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.img-hover-wrap:hover .plus-icon {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+}
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.83 ) !important; 
+}
+  /* Close, arrows, download, etc. */
+.lg-toolbar .lg-icon,
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+  color: #eeeeeee6 !important;  
+}
+.lg-toolbar .lg-icon:hover,
+.lg-actions .lg-next:hover,
+.lg-actions .lg-prev:hover {
+  color: var(--accent) !important;  
+}
+.lg-current .lg-image {
+  border-radius: 3px; 
+  overflow: hidden;
+}
+.lg-sub-html {
+  color: var(--accent) !important;
+ font-weight: bold;
+}
+/* Thumbnail active border */
+.lg-thumb-item.active {
+  border-color: #B17F59 !important;
+}
+.lg-thumb-item:hover {
+  border-color: #B17F59 !important;
+}

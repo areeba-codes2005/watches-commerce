@@ -1,0 +1,113 @@
+:root  {
+    --primary: #c09578;
+    --primary_hover: #AE876D;
+    --secondary: #c09578;
+    --text: #626262;
+    --accent: #ffffff;
+    --light: #888888;
+    --border: #3b3b3b;
+    --background: #252525;
+    --color-9e72934: #FFF;
+}
+.hover-zone {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+.shop-dropdown-outer {
+  position: fixed;
+  top: 38%;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: var(--color-9e72934);
+  padding: 30px 20px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: dropdownFade 0.3s ease;
+}
+
+@keyframes dropdownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shop-dropdown-outer h6 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.shop-dropdown-outer a {
+  text-decoration: none;  
+  color: var(--text);
+}
+.shop-link-item {
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+.shop-dropdown-outer a:hover {
+  color: var(--primary_hover);
+}
+.shop-dropdown-outer .popular-pro-img {
+  width: 5rem;
+  background-color: #f4f6f9;
+  border: 1px solid #e5e2e2;
+}
+.shop-dropdown-outer .popular-pro-name {
+  font-size: 0.8rem;
+  color: var(--text);
+}
+.shop-dropdown-outer .popular-pro-name:hover {
+  color: var(--primary_hover);
+}
+.shop-dropdown-outer .popular-pro-rating {
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+}
+.shop-dropdown-outer .popular-pro-rating .custom-star {
+  color: var(--primary);
+}
+
+.shop-dropdown-outer .popular-pro-rating .last-star {
+  color: #ccc8c8;
+}
+/* For 1366px and smaller desktops */
+/* @media (min-width: 1200px) and (max-width: 1399px) {
+  .shop-dropdown-outer {
+    top: 19%;
+  }
+} */
+
+/* For 1440px and larger screens */
+@media (min-width: 1400px) {
+  .shop-dropdown-outer {
+    top: 28%;
+  }
+}
+/* @media (max-width: 768px) {
+  .shop-dropdown-outer {
+    top: 30%;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - 80%);
+    overflow-y: auto; */
+    /* width: fit-content; */
+  /* }
+}
+@media (max-width: 576px) {
+  .shop-dropdown-outer {
+    top: 41%;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - 82%);
+    overflow-y: auto; */
+    /* width: fit-content; */
+  /* }
+} */

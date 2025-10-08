@@ -1,0 +1,40 @@
+:root  {
+    --primary: #c09578;
+    --primary_hover: #AE876D;
+    --text: #626262;
+    --accent: #ffffff;
+    --light: #888888;
+    --border: #3b3b3b;
+    --background: #252525;
+    --color-9e72934: #FFF;
+}
+.na {
+  background-color: var(--primary);
+}
+.navbar .nav-link{
+  color: var(--accent);
+  font-weight: 600;
+}
+.navbar .nav-link:hover {
+  color: var(--background);
+}
+.navbar .nav-link.active {
+  color: var(--background) !important;
+}
+.navbar-toggler {
+  border: none;
+  background: none; 
+  padding: 0.25rem;
+}
+.navbar-toggler-icon {
+  background-image: none;
+}
+.navbar-toggler-icon::before {
+  content: "\2630";
+  font-size: 1.5em;          
+  color: var(--accent);
+  font-weight: bold;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
